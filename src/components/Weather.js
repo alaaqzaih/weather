@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Weather = (props) => {
 
 
-
-
     let d = new Date();
     let date = d.getDate();
     let year = d.getFullYear();

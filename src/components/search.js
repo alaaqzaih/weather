@@ -9,27 +9,6 @@ const Search = (props) => {
     const FindWeatherClicked = () => props.searchClicked(location)
     
 
-    const onLocationChanged = (e) => setLocation(e.target.value)
-    // const [search, setSearch] = useState("london");
-    // const [data, setData] = useState([]);
-    // const [input, setInput] =useState("");
-    // let componentMounted = true;
-
-    // useEffect(()=> {
-    //     const fetchWeather = async () => {
-    //         const response = await Fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=529995e3c0aa4e4baefbb26284433d76
-    //         `);
-    //         if(componentMounted){
-    //             setData(await response.json());
-    //             console.log(data)
-    //         }
-    //         return () => {
-    //             componentMounted = false;
-    //         }
-    //     }
-    //     fetchWeather();
-    // }, [search]);
-
 return(
 
      <div>
@@ -45,14 +24,11 @@ return(
                                            aria-describedby="basic-addon2"
                                            name='search'
                                            value={location}
-                                           onChange = {onLocationChanged}
-                                        //    onChange = {(e)=> setInput(e.target.value)}
+                                           onChange = {(e)=> setLocation(e.target.value)}
                                            required
                                            
                                            />
-                                        {/* <button type='submit' class="input-group-text" id="basic-addon2">
-                                           <h1> Find weather</h1>
-                                        </button> */}
+                                     
                                                     <Button variant="outline-success"
                                                      onClick={FindWeatherClicked}> Find Weather</Button>
 
